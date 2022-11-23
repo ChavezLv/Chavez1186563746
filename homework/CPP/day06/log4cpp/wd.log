@@ -1,0 +1,10 @@
+2022-11-03 17:54:56,213 salesDepart [FATAL] this is an emerg msg
+2022-11-03 17:54:56,213 salesDepart [FATAL] this is a fatal msg
+2022-11-03 17:54:56,213 salesDepart [CRIT] this is a crital msg
+2022-11-03 17:54:56,213 salesDepart [ALERT] this is an alert msg
+2022-11-03 17:54:56,213 salesDepart [ERROR] this is an error msg
+2022-11-03 17:55:48,858 salesDepart [FATAL] this is an emerg msg
+2022-11-03 17:55:48,858 salesDepart [FATAL] this is a fatal msg
+2022-11-03 17:55:48,858 salesDepart [CRIT] this is a crital msg
+2022-11-03 17:55:48,858 salesDepart [ALERT] this is an alert msg
+2022-11-03 17:55:48,858 salesDepart [ERROR] this is an error msg

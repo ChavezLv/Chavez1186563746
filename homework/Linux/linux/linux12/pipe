@@ -1,0 +1,7 @@
+int main(){
+    FILE* fp= popen("./echoall","r");
+    char buf[]1024];
+    while(fgets(buf,sizeof(buf),fp)!=NULL)
+        fputs();
+
+}
