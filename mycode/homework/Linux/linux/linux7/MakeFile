@@ -1,0 +1,9 @@
+SRCS:=$(wildcast *.c)
+BIN:=$( %.c, %, $(SRCS))
+.PHONY:all clean rebuild
+all:BIN
+%:%.c
+    gcc $^ -o $@
+clean:
+	$(RM) $(OBJS)
+rebuld: clean $(all)

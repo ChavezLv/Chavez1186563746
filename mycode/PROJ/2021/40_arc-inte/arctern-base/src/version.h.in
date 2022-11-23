@@ -1,0 +1,9 @@
+#ifndef VERSION_H_IN
+#define VERSION_H_IN
+
+#define VERSION_MAJOR @Arctern_VERSION_MAJOR@
+#define VERSION_MINOR @Arctern_VERSION_MINOR@
+#define VERSION_REVISION @Arctern_VERSION_REVISION@
+
+
+#endif // VERSION_H_IN

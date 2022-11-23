@@ -1,0 +1,1 @@
+编译时加上   g++ .cc main.cc 不要漏了 tiny**.cpp

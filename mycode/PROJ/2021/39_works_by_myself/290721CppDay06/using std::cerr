@@ -1,0 +1,130 @@
+PTHREAD_ONCE(3POSIX)      POSIX Programmer's Manual     PTHREAD_ONCE(3POSIX)
+
+PPRROOLLOOGG
+       This manual page is part of the POSIX Programmer's Manual.  The Linux
+       implementation of this interface may differ (consult the  correspond‐
+       ing  Linux  manual page for details of Linux behavior), or the inter‐
+       face may not be implemented on Linux.
+
+NNAAMMEE
+       pthread_once — dynamic package initialization
+
+SSYYNNOOPPSSIISS
+       #include <pthread.h>
+
+       int pthread_once(pthread_once_t *_o_n_c_e___c_o_n_t_r_o_l,
+           void (*_i_n_i_t___r_o_u_t_i_n_e)(void));
+       pthread_once_t _o_n_c_e___c_o_n_t_r_o_l = PTHREAD_ONCE_INIT;
+
+DDEESSCCRRIIPPTTIIOONN
+       The first call to _p_t_h_r_e_a_d___o_n_c_e() by any thread in a process,  with  a
+       given  _o_n_c_e___c_o_n_t_r_o_l,  shall  call the _i_n_i_t___r_o_u_t_i_n_e with no arguments.
+       Subsequent calls of _p_t_h_r_e_a_d___o_n_c_e() with the same  _o_n_c_e___c_o_n_t_r_o_l  shall
+       not  call the _i_n_i_t___r_o_u_t_i_n_e.  On return from _p_t_h_r_e_a_d___o_n_c_e(), _i_n_i_t___r_o_u_‐
+       _t_i_n_e shall have completed. The _o_n_c_e___c_o_n_t_r_o_l parameter shall determine
+       whether the associated initialization routine has been called.
+
+       The  _p_t_h_r_e_a_d___o_n_c_e() function is not a cancellation point. However, if
+       _i_n_i_t___r_o_u_t_i_n_e is a cancellation point and is canceled, the  effect  on
+       _o_n_c_e___c_o_n_t_r_o_l shall be as if _p_t_h_r_e_a_d___o_n_c_e() was never called.
+
+       The constant PTHREAD_ONCE_INIT is defined in the _<_p_t_h_r_e_a_d_._h_> header.
+
+       The behavior of _p_t_h_r_e_a_d___o_n_c_e() is undefined if _o_n_c_e___c_o_n_t_r_o_l has auto‐
+       matic storage duration or is not initialized by PTHREAD_ONCE_INIT.
+
+RREETTUURRNN VVAALLUUEE
+       Upon successful completion, _p_t_h_r_e_a_d___o_n_c_e() shall return zero;  other‐
+       wise, an error number shall be returned to indicate the error.
+
+EERRRROORRSS
+       The  _p_t_h_r_e_a_d___o_n_c_e()  function  shall  not  return  an  error  code of
+       [[EEIINNTTRR]].
+
+       _T_h_e _f_o_l_l_o_w_i_n_g _s_e_c_t_i_o_n_s _a_r_e _i_n_f_o_r_m_a_t_i_v_e_.
+
+EEXXAAMMPPLLEESS
+       None.
+
+AAPPPPLLIICCAATTIIOONN UUSSAAGGEE
+       None.
+
+RRAATTIIOONNAALLEE
+       Some C libraries are designed for dynamic  initialization.  That  is,
+       the global initialization for the library is performed when the first
+       procedure in the library is called.  In  a  single-threaded  program,
+       this  is  normally implemented using a static variable whose value is
+       checked on entry to a routine, as follows:
+
+           ssttaattiicc iinntt rraannddoomm__iiss__iinniittiiaalliizzeedd == 00;;
+           eexxtteerrnn iinntt iinniittiiaalliizzee__rraannddoomm(());;
+
+           int random_function()
+           {
+               if (random_is_initialized == 0) {
+                   initialize_random();
+                   random_is_initialized = 1;
+               }
+               ... /* Operations performed after initialization. */
+           }
+
+       To keep the same structure in a multi-threaded program, a new  primi‐
+       tive  is  needed.  Otherwise, library initialization has to be accom‐
+       plished by an explicit  call  to  a  library-exported  initialization
+       function prior to any use of the library.
+
+       For  dynamic  library  initialization  in a multi-threaded process, a
+       simple initialization flag is not sufficient; the flag  needs  to  be
+       protected  against  modification  by  multiple threads simultaneously
+       calling into the library. Protecting the flag requires the use  of  a
+       mutex;  however, mutexes have to be initialized before they are used.
+       Ensuring that the mutex is only initialized once requires a recursive
+       solution to this problem.
+
+       The use of _p_t_h_r_e_a_d___o_n_c_e() not only supplies an implementation-guaran‐
+       teed means of dynamic initialization, it provides an aid to the reli‐
+       able construction of multi-threaded and realtime systems. The preced‐
+       ing example then becomes:
+
+           ##iinncclluuddee <<pptthhrreeaadd..hh>>
+           ssttaattiicc pptthhrreeaadd__oonnccee__tt rraannddoomm__iiss__iinniittiiaalliizzeedd == PPTTHHRREEAADD__OONNCCEE__IINNIITT;;
+           eexxtteerrnn iinntt iinniittiiaalliizzee__rraannddoomm(());;
+
+           int random_function()
+           {
+               (void) pthread_once(&random_is_initialized, initialize_random);
+               ... /* Operations performed after initialization. */
+           }
+
+       Note that a pptthhrreeaadd__oonnccee__tt cannot be an array because some  compilers
+       do not accept the construct &&<<aarrrraayy__nnaammee>>.
+
+       If  an  implementation  detects  that  the  value  specified  by  the
+       _o_n_c_e___c_o_n_t_r_o_l  argument  to  _p_t_h_r_e_a_d___o_n_c_e()  does  not  refer   to   a
+       pptthhrreeaadd__oonnccee__tt  object initialized by PTHREAD_ONCE_INIT, it is recom‐
+       mended that the function should fail and report an [[EEIINNVVAALL]] error.
+
+FFUUTTUURREE DDIIRREECCTTIIOONNSS
+       None.
+
+SSEEEE AALLSSOO
+       The Base Definitions volume of POSIX.1‐2008, <<pptthhrreeaadd..hh>>
+
+CCOOPPYYRRIIGGHHTT
+       Portions of this text are reprinted and reproduced in electronic form
+       from IEEE Std 1003.1, 2013 Edition, Standard for Information Technol‐
+       ogy -- Portable Operating System Interface (POSIX),  The  Open  Group
+       Base  Specifications  Issue 7, Copyright (C) 2013 by the Institute of
+       Electrical and Electronics Engineers, Inc and The Open Group.   (This
+       is  POSIX.1-2008  with  the 2013 Technical Corrigendum 1 applied.) In
+       the event of any discrepancy between this version  and  the  original
+       IEEE  and  The  Open  Group  Standard, the original IEEE and The Open
+       Group Standard is the referee document. The original Standard can  be
+       obtained online at http://www.unix.org/online.html .
+
+       Any  typographical  or formatting errors that appear in this page are
+       most likely to have been introduced  during  the  conversion  of  the
+       source  files  to  man  page  format.  To  report  such  errors,  see
+       https://www.kernel.org/doc/man-pages/reporting_bugs.html .
+
+IEEE/The Open Group                 2013                PTHREAD_ONCE(3POSIX)

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+buildFolder="cmake-build-debug"
+scene="LinuxTvmAlgorithms"
+
+rm -rf $buildFolder
+if [ ! -d $buildFolder ]
+then
+  mkdir $buildFolder
+fi
+cd $buildFolder
+
+inputNum=$#
+echo "inputNum = $inputNum"
+
+#Debug Release
+#now delete install directory
+rm -rf install
+mkdir install
+cmake \
+      -DDEPLOY_TARGET=linux \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DSCENE=$scene \
+      -DTVM_ALLOWED=ON \
+      -DWITH_LICENSE=OFF \
+      -DPLAIN_MODEL=ON \
+      -DARCTERN_EXPORT_API=ON \
+      -DPLATFORM_LINUX=ON \
+      -DAVX_TARGET=avx2 \
+      -DWITH_PYTHON=ON \
+      ..
+make -j4
+#make install
+
+if [ $inputNum -gt 0 ];then
+  if [ $1 == "test" ];then
+    echo "========== Begin UnitTest =========="
+    cd ..
+    bash runAllUnitTest.sh $buildFolder "./SceneCmake/$scene.cmake"
+  fi
+fi

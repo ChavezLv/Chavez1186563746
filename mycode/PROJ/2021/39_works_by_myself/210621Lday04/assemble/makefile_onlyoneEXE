@@ -1,0 +1,12 @@
+SRCS:=$(wildcard *.c)
+OBJS:=$(patsubst %.c,%.o,$(SRCS))
+ELF:=%
+ELFS:=main
+CC:=gcc
+CFLAGS:=-g -Wall
+$(ELF):$(OBJS)
+	$(CC) -o $@ $^
+.PHONY: clean rebuild
+clean:
+	$(RM) $(OBJS) $(ELF) $(ELFS)
+rebuild: $(ELF) clean

@@ -1,0 +1,12 @@
+ip 192.168.226.128
+port 2000
+threadnum 4
+queuenum 10
+english_store_file  /home/ren/mydir/project_cpp_4.0/data/dat/dictional_en.dat
+chinese_store_file  /home/ren/mydir/project_cpp_4.0/data/dat/dictional_zh.dat
+english_index_file  /home/ren/mydir/project_cpp_4.0/data/index/en_index
+chinese_index_file  /home/ren/mydir/project_cpp_4.0/data/index/zh_index
+initime 5
+intervaltime 10
+cachefile /home/ren/mydir/project_cpp_4.0/data/cache/storecache
+cacheCapacity 10

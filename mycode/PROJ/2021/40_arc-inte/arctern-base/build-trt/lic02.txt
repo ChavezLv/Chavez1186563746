@@ -1,0 +1,42 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LicenseLandmark
+[ RUN      ] LicenseLandmark.TRT100
+__func__ addGroundTruth: 18: /workspace/arctern-base/../arctern-metadata/ModelsVerifyData/results_arcterncpp/LINUX_MXNET_CPU/license-landmark-f32-d-1.0.0-rc.json
+__func__ addGroundTruth: 34: "V3_test/1_hyx/000.jpg"
+__func__ addGroundTruth: 34: "V3_test/1_hyx/001.jpg"
+
+
+=========================Single Test==========================
+
+
+Tesla T4
+LocalPostProcess: 52: 211, and input_w_ = 256
+LocalPostProcess: 53: 67, and input_w_ = 128
+LocalPostProcess: 54: 0.824219, and scale_y = 0.523438
+LocalPostProcess: 62: landmark: 111.392, 158.849, (92, 83). 
+LocalPostProcess: 62: landmark: 669.845, 141.532, (552, 74). 
+LocalPostProcess: 62: landmark: 774.333, 295.094, (638, 154). 
+LocalPostProcess: 62: landmark: 199.166, 430.941, (164, 226). 
+[2022-01-05 01:36:30.157] [info] CheckPictures, 76, cost time: 490.91 ms
+
+func:checkResult: 92 83 func:checkResult: 552 74 func:checkResult: 638 154 func:checkResult: 164 226 LocalPostProcess: 52: 224, and input_w_ = 256
+LocalPostProcess: 53: 70, and input_w_ = 128
+LocalPostProcess: 54: 0.875, and scale_y = 0.546875
+LocalPostProcess: 62: landmark: 210.645, 201.143, (184, 110). 
+LocalPostProcess: 62: landmark: 874.508, 178.812, (765, 98). 
+LocalPostProcess: 62: landmark: 990.21, 405.901, (866, 222). 
+LocalPostProcess: 62: landmark: 302.669, 616.918, (265, 337). 
+[2022-01-05 01:36:30.161] [info] CheckPictures, 76, cost time: 2.802 ms
+
+func:checkResult: 184 110 func:checkResult: 765 98 func:checkResult: 866 222 func:checkResult: 265 337 
+
+=========================Batch Test==========================
+
+
+[       OK ] LicenseLandmark.TRT100 (3822 ms)
+[----------] 1 test from LicenseLandmark (3822 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3822 ms total)
+[  PASSED  ] 1 test.

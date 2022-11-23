@@ -1,0 +1,26 @@
+#ifndef CONFIG_H_IN
+#define CONFIG_H_IN
+
+#include <string>
+
+#ifdef MXNET_ALLOWED
+#define ARCTERN_PROJECT_PATH "@Arctern_PROJECT_PATH@"
+#elif defined(HISI_ALLOWED)
+#define ARCTERN_PROJECT_PATH "/root/data4/chengaohua/arctern1.0"
+#elif defined(TVM_ALLOWED)
+#define ARCTERN_PROJECT_PATH "@Arctern_PROJECT_PATH@"
+#elif defined(RKNN_ALLOWED)
+#define ARCTERN_PROJECT_PATH "/userdata/workspace/Arctern/arctern1.0"
+#elif defined(RKNN2_ALLOWED)
+#define ARCTERN_PROJECT_PATH "/data/cghTest"
+#elif defined(TRT_ALLOWED)
+#define ARCTERN_PROJECT_PATH "@Arctern_PROJECT_PATH@"
+#elif defined(MNN_ALLOWED)
+#define ARCTERN_PROJECT_PATH "@Arctern_PROJECT_PATH@"
+#elif defined(ATLAS_ALLOWED)
+#define ARCTERN_PROJECT_PATH "@Arctern_PROJECT_PATH@"
+#endif
+
+std::string getDir();
+
+#endif // VERSION_H_IN

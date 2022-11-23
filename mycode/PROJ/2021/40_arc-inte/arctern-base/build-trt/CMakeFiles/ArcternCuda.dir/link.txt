@@ -1,0 +1,2 @@
+/usr/bin/ar qc libArcternCuda.a CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/affine.cu.o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/crop.cu.o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/cvtColor.cu.o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/normalized.cu.o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/padding.cu.o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/resize.cu.o
+/usr/bin/ranlib libArcternCuda.a

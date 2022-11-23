@@ -1,0 +1,15 @@
+SeverIP 172.17.147.39
+Port 8888
+ThreadpoolCap 4
+TaskQueSize 5
+initTimer 1
+internalTimer 5
+cacheSize 10
+ResultSize 3
+cnDictPath ./data/cnDict.dat
+enDictPath ./data/enDict.dat
+aimsdir ./data/dictionary/dictionary
+stopdir ./data/stop_words
+cachePath ./Offline/data/Cache
+dictionary ./Offline/data/dictionary/dictionary
+indexpath ./Offline/data/index/index

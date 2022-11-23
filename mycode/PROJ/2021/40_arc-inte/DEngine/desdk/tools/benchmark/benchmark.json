@@ -1,0 +1,31 @@
+{
+  "device_num":1,
+  "test_suites":
+  [{
+    "test_suite_name":"normal",
+    "accuracy_datasets_path":"/DEngine/data/datasets/ILSVRC2012/ILSVRC2012_img_val",
+    "synset_path":"/DEngine/data/datasets/ILSVRC2012/synset_1000.txt",
+    "val_path":"/DEngine/data/datasets/ILSVRC2012/val.txt",
+    "fps_datasets_paths":["/DEngine/data/datasets/ILSVRC2012/ILSVRC2012_img_val"],
+    "fps_datasets_formats":["image"],
+    "models_root":"/DEngine/model/dp1000",
+    "thread_list":[1],
+    "batch_list":[1,4,8],
+    "nnp_num_list":[4,4,4],
+    "resource_num_list":[8,8,8],
+    "topn":5,
+    "time_criteria": 10.0,
+    "num_criteria": 1000,
+    "interval_type":0,
+    "interval_time":266,
+    "accuracy_test": false,
+    "fps_test": true,
+    "end2end_test": true,
+    "chip_test": true,
+    "input_quesize": 32,
+    "test_models":
+    {
+      "caffe_squeezenet_v1.1": {"do_test":true, "shape":[227,227], "rgb":true}
+    }
+  }]
+}

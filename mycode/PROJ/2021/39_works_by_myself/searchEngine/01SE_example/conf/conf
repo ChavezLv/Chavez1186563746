@@ -1,0 +1,19 @@
+ServerIP 192.168.64.3
+Port 2333
+ThreadpoolCap 4
+TaskQueSize 5
+enDictPath ../data/enDick.dat
+cnDictPath ../data/cnDick.dat
+enCorpusDir ../data/yuliao
+cnCorpusDir ../data/yuliao/art
+stopEnPath ../data/yuliao/stop-words-list/stop_words_eng.txt
+stopCnPath ../data/jieba/stop_words.utf8
+cachePath ../data/Cache
+UpdateCachesTimeInit 10
+UpdateCachesTimePeri 30
+maxResNum 5
+
+dict_path      ../data/jieba/jieba.dict.utf8
+hmm_path       ../data/jieba/hmm_model.utf8
+user_dict_path ../data/jieba/user.dict.utf8
+idf_path       ../data/jieba/idf.utf8

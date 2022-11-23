@@ -1,0 +1,2 @@
+fadfasfasdfsadfasdfasdfasdfasfstream:0x55be83fdd020
+&cout:0x55be83fdd020

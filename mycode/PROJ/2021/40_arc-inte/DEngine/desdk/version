@@ -1,0 +1,265 @@
+current desdk version v1.9.0(2021.8.12)
+
+release notes：
+V1.9.0版本说明：
+功能增加：
+1、desdk工具支持升级操作
+2、desdk工具支持led点灯功能
+3、支持通过libusb而非hidraw启动方式，减少对主控内核驱动的要求。默认还是通过hidraw方式启动
+4、增加外部接口dcmi::GenUsbCfgIni()用于生成usbprop.ini
+5、增加python同步推理接口infer_engine，优化端到端性能，更新python示例
+6、mipi驱动增加对MDWS相机主板的支持
+7、EVB下支持nand/emmc启动可选
+8、工具链runtime库升级，对应detvm1.2.0及以上版本
+
+缺陷修复：
+1、修复usb端点初始化返回值错误导致系统异常的问题
+2、修复多线程文件传输故障
+3、修复图像高大于宽时，CRGH ROI处理断言故障
+4、Download接口增大等待时间避免尹等待时间不够设备不能全部被探测到，修正当部分设备离线时不会重复探测设备的问题
+5、修正设备数量达到上限时usb热插拔函数返回值错误
+6、修复了多媒体模块的一些缺陷
+7、修复desdk工具从芯片反复下载文件时存在线程泄漏导致芯片卡死的故障
+8、升级工具链runtime库，对应detvm1.2.0及以上版本
+   9.1.multiply s16xs16=s32时，dma调度错误使用segment size，导致死机。
+   9.2.multiply新增一种处理场景：带有batch的within channel。
+   
+优化：
+1、设备数量与配置不一致时完善烧写和生产测试功能，增加生产测试详情打印
+2、完善透视变换接口入参检查，增加异常返回值
+3、desdk工具支持在bootrom/uboot状态下生成usb配置文件
+4、增加等待时间避免dp1000启动后第一次传文件偶现超时
+5、主控usb库中自动检测去除usbtest.ko干扰
+6、解码器输入buffer释放优化
+
+特别说明：
+无
+
+
+history:
+V1.8.0：
+功能增加：
+1、增加host-device双向心跳机制。
+   device to host心跳间隔默认是3s一次，超时9次触发心跳异常，不可配置。
+   host to device 心跳可配置周期和次数。
+2、增加device硬件狗配置接口，默认关闭。可配置喂狗周期和超时时间。
+
+缺陷修复：
+1、修复rtsp url密码中包含@字符时取流失败问题
+
+特别说明：
+无
+
+V1.7.0(2021.4.10)
+缺陷修复：
+1、多媒体模块修复各个项目反馈的视频流适应性引起的内存泄漏、死机；规避部分硬件问题
+2、修复nand写故障
+3、修复内存管理缺陷，该缺陷再特定场景下会导致误报内存耗尽
+4、取消nn推理profile层数限制，解决某些模型层数过深导致推理死机的问题
+5、工具链runtime库升级，对应detvm1.1.0.5及以上版本
+6、补充非graph接口、下载升级异常处理接口、芯片侧server开发示例
+7、增加模型精度测试示例
+
+特别说明：
+无
+
+V1.6.1(2021.2.1)
+功能增加：
+1、usb驱动对龙芯mips64架构的支持
+优化：
+1、usb驱动库隐藏libusb库符号
+2、desdk net版本取消ffmpeg依赖
+3、解决desdk python版本docker外库加载崩溃问题
+4、desdk对外不依赖libusb库
+
+V1.6.0(2020.12.19)
+功能增加：
+1、支持网络版本下的DCMI功能，包括：端口扫描、下载、升级、异常回调等
+2、DCMI支持多板卡下载、升级；
+3、desdk工具支持强制生成usbprop.ini（不保证正确性，仅用于无法复位管脚场景临时生成配置文件） 
+4、dcmi增加card id/device id/查询接口
+5、desdk工具增加支持DDR稳定性测试工具和usb稳定性测试
+6、CV算子支持nv16-nv12的转换
+优化：
+1、desdk工具集成到安装包中
+2、优化jenc node异步模式性能
+3、CV算子affine优化
+故障修复：
+1、修复file_in空行也读进来导致主控报错的问题
+2、修复dcmi升级完未清理临时文件的问题
+3、修复解决方案项目usb端点分配失败的问题
+4、修复pcie dcmi的GetDevStatus接口出现segment fault等问题
+5、去除libusb16MB的内存限制，解决多板卡场景可能出现usb内存不够的问题
+6、修复videoinput的64位时间戳通过videodecoder时被32位截断问题
+7、修复ProfileNode因时序问题可能先执行了de.dspprofile.close后执行de.dspprofile.get导致芯片侧访问非法地址的问题
+8、修复p2p退出时p2p_tx_task中可能残留有P2PSendTask导致析构时内存泄露问题
+
+V1.5.0
+功能增加：
+1、增加file in标准node
+   1.1、支持本地单一文件和文件列表文件输入
+   1.2、文件列表支持索引功能，支持单文件索引或区间索引
+   1.3、支持loop功能，支持有限次和无限次loop
+   1.4、支持用户自定义输入扩展，用户需继承后重写GetData()函数
+   1.5、支持h264,h265,mjpeg, RAW文件输入，暂不支持MP4文件输入
+2、支持win下gcc编译：
+    环境要求：
+    cmake：3.14.5
+    gcc/g++：7.4.0
+    make: 4.2.1
+3、内核支持UVC
+4、usb端点管理优化--通用端点管理
+   4.1、支持虚拟串口、uvc、hid等符合设备切换
+   4.2、支持usb端点在不同模式自动分配
+5、工具优化--整合deutil、sdkservice、usbprop_tool为统一的desdk工具
+   5.1、 完善刷机工具
+   5.2、文件传输工具支持不同芯片不同文件并行传输
+   5.3、支持完整的usb 信息获取功能
+   5.4、支持usbprop.ini自动生成
+   5.5、支持usb模式切换功能   
+故障修复：
+1、修复部分项目中设备key值过大溢出问题
+2、修复daemon_server在read()返回0或负数时会进入死循环，进而抢占CPU100%问题
+3、修复aidrv log控制未设置默认值问题
+4、修复libdeutil_download.so和libctrlso中存在两份DeviceControl单例，造成使用混乱(x86/phytium平台)问题
+5、修复host增加hal_file_in.c编译不通过问题
+6、修复模型下载最后一次内存未释放问题
+7、修复usb3.0切换到usb2.0key变化问题
+8、修复YZ盒子开机key变化问题
+特别说明：
+1、工具整合会导致下载、文件传输等工具命令改变和扩充
+2、host库libusbraw.so不再对外提供，新增libusbdev.so，各解决方案项目需要注意主控端cmake的修改。
+3、usbporp.ini的内容改变，不兼容之前版本的usbporp.ini，各解决方案项目需要用desdk set -t usbprop_ini来重新生成ini文件。
+
+V1.4.1
+功能增加：
+1、主控支持龙芯（MIPS）编译
+2、增加阿里项目CV算子需求
+故障修复：
+1、修复p2p带宽测试数据溢出问题
+2、修复BridgeInfo::profile_enable未初始化导致误开启bridge流量统计功能的问题
+3、解决升级过程中出现偶发失败问题
+
+V1.4.0
+功能增加：
+1、DESDK net版本支持手动设置ip
+2、DESDK net版本自动启动ssh服务
+3、支持nand多分区功能
+故障修复：
+1、单条log超过设定的log buffer size时分多条发送，避免内存申请失败断言。
+2、解决mm node proc函数设置为private导致无法扩展的问题
+3、jpeg编码自动16字节对齐，解决部分图片可解码不可编码的问题
+4、解决多路p2p共享相同的p2p通道时rx_queue释放时存在的风险。
+5、解决多板卡场景下下载和生产测试的故障
+
+V1.3.0(2020.11.4)
+功能升级：
+1、detvm工具链runtime库升级至1.1.0
+2、支持bridge流量统计，默认关闭
+3、支持用户注册模型解密接口
+故障修复：
+1、ndarray克隆时，使用bear_data_gap长度，解决ndarray往下级传递时预留长度丢失的问题。
+2、修复host取流出错，第一帧就发EOS给芯片导致芯片死机问题。
+3、修复模型加载接口外部使用缺少必要头文件包含的问题
+
+V1.2.0(2020.10.10)
+功能：
+1、增加usbprop tool，用于自动配置usbprop.ini
+2、生产测试增加emmc/flash测试项
+3、单DSP支持混合模式（aie & cv）功能
+故障修复：
+1、解决 face-quality-1.0.3设置resize_out_image_type为GRAY时运行卡住问题
+2、解决 PCIE离线视频文件播放结束后，停止抓拍业务时，芯片侧死机问题
+3、解决 dcmi多线程调用时usb配置文件加载失败问题
+4、解决 RPC遗留MonitorTask线程不退出问题
+特别说明：
+1、由于增加了node扩展功能，修改了Thread::Proc函数原型，所以各解决方案项目新增的node需要做相应的适配修改。
+修改方法见《云天励飞DESDK Graph编程手册》7.4章节描述。
+
+V1.1.3
+功能：
+1、支持win net host
+2、提供芯片资源查询接口（接口说明详见《云天励飞DESDK API手册》）
+3、提供node扩展功能（功能说详见《云天励飞DESDK Graph编程手册》）
+优化：
+1、graph析构前如果有阻塞操作，必须调用stopOutput，防止graph析构过程卡死
+2、decorder & encorder 输入输出task结构新增扩展字段
+3、模型加载接口提供返回值供判断模型加载是否成功《接口说明详见《云天励飞DESDK API手册》》
+故障修复：
+1、解决海康相机修改配置停流的时候段错误问题
+2、解决IF-C9版本构建缺多媒体库的问题
+
+V1.1.2
+功能：
+1、支持读取json字符串配置graph
+2、CV：affine支持RGB888 planar输入
+3、CV：支持支持padding功能，支持常量、复制、镜像三种padding模式
+故障解决：
+1、解决多线程并行下载固件卡死的问题
+2、修复libgstlive555库拷贝路径错误导致海康枪机取流失败问题
+3、修复模型加载卸载接口头文件包含问题
+
+V1.1.1
+1、ali项目补丁 
+ 1.1 affine算子支持 const zero padding和 coppy border padding 
+ 1.2 生产测试支持多设备并行执行，多设备参数有bitmmap改为vector 
+2.Hik项目补丁
+ 2.1 解决H3主控下载流程问题（无 proc/sys/printk，usb3.0接口导致下载和启动时key发生变化）
+ 2.2 多媒体更新Hisiv500 prebuilts库
+3.DESDK补丁
+ 3.1 解决1.1.0版本x86用户无法使用google gtest问题
+
+V1.1.0
+新增功能
+1.1 支持4维模型输入
+1.2 videoin支持自动帧率控制
+1.3 支持YUV->BGR的格式转换
+1.4 支持RK3399_linux_host主控
+1.5 3399主控支持虚拟串口
+1.6 nn引擎全面支持netbin参数配置
+1.7 恢复支持x86_linux_host net版本
+重要优化
+2.1 DSP开机时长优化
+2.2 删除monitor应用，不再使用
+2.3 KCF性能优化，支持小尺度跟踪
+2.4 支持DESDK芯片版本usb/net模式切换
+故障修复
+3.1 修复CVT格式转换错误
+3.2 修改graph析构流程解决gprph析构过程中buffer归还时序问题导致的死机
+3.3 解码器对设置了reordering 却没有reordering步骤语义的流处理不当，已参考h264规范做了修正
+3.4 解决deutil工具在找不到xargs命令时探测key出现段错误的问题
+重要说明：
+1.nn引擎全面支持netbin参数配置---要求模型使用0.5.3版本及以上工具链编译，且正确配置resizeinfo信息
+2.x86_linux_host下net和usb模式的切换，在用户手册中有专门说明
+
+V1.0.5
+1、device段显式加载动态库从graph剥离成通用功能
+2、阿里项目定制CV算子
+3、阿里项目故障修复
+
+V1.0.4
+1、kcf-128 batch优化
+2、支持4nnp特性
+3、usbkey自动识别支持3399主控
+4、增加测试用例
+5、增加ddr挂测程序
+6、增加阿里项目定制算子
+7、增加主控异常触发接口
+8、解决海康、阿里项目故障
+
+V1.0.0(2020.7.16)
+1.用户接口参见《云天励飞DESDK Graph编程手册》、《云天励飞DESDK API手册》
+2.增加dcmi类接口，参见《云天励飞DESDK API手册》3.6章节。
+2.sdkserivice 取消了 -m -s 参数，读写数据兼容以前的命令。
+3.集成工具链 detvm v1.0.0 dsp runtime库
+4.部署docker需要安装usbutils工具，apt-get install usbutils
+5.支持node task过滤
+6.优化边沿检测CV算子
+7.优化了部分CV算子、扩充了部分CV算子支持的输入类型，详见《云天励飞DESDK FML API手册》
+8.bugfix：
+  1）解决多个Graph共用p2p channel场景下，第一个Graph析构导致其他Graph使用p2p channel异常死机的问题
+  2）修复cpu占用率统计不准的问题
+
+
+
+

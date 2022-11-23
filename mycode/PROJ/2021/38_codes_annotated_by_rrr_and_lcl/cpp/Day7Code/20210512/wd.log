@@ -1,0 +1,44 @@
+2021-05-12 11:19:00,126  [FATAL] The log is fatal 
+2021-05-12 11:19:00,126  [ALERT] The log is alter 
+2021-05-12 11:19:00,126  [CRIT] The log is crit 
+2021-05-12 11:19:00,126  [ERROR] The log is error 
+2021-05-12 11:20:01,267  [FATAL] The log is fatal 
+2021-05-12 11:20:01,267  [ALERT] The log is alter 
+2021-05-12 11:20:01,267  [CRIT] The log is crit 
+2021-05-12 11:20:01,267  [ERROR] The log is error 
+2021-05-12 11:22:30,709  [FATAL] The log is fatal 
+2021-05-12 11:22:30,709  [ALERT] The log is alter 
+2021-05-12 11:22:30,710  [CRIT] The log is crit 
+2021-05-12 11:22:30,710  [ERROR] The log is error 
+2021-05-12 11:25:15,417 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:15,417 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:15,417 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:15,417 MyCat [ERROR] The log is error 
+2021-05-12 11:25:46,864 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:46,865 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:46,865 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:46,865 MyCat [ERROR] The log is error 
+2021-05-12 11:25:47,452 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:47,452 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:47,452 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:47,452 MyCat [ERROR] The log is error 
+2021-05-12 11:25:48,011 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:48,011 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:48,011 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:48,011 MyCat [ERROR] The log is error 
+2021-05-12 11:25:48,549 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:48,549 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:48,549 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:48,549 MyCat [ERROR] The log is error 
+2021-05-12 11:25:49,100 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:49,100 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:49,100 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:49,100 MyCat [ERROR] The log is error 
+2021-05-12 11:25:49,690 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:49,690 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:49,690 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:49,690 MyCat [ERROR] The log is error 
+2021-05-12 11:25:54,232 MyCat [FATAL] The log is fatal 
+2021-05-12 11:25:54,232 MyCat [ALERT] The log is alter 
+2021-05-12 11:25:54,232 MyCat [CRIT] The log is crit 
+2021-05-12 11:25:54,232 MyCat [ERROR] The log is error 

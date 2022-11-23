@@ -1,0 +1,64 @@
+cmake_minimum_required(VERSION 3.1)
+
+project(hisiFaceTracker)
+
+set(ARCTERN_hisiFaceTracker_VERSION_MAJOR    1)
+set(ARCTERN_hisiFaceTracker_VERSION_MINOR    0)
+set(ARCTERN_hisiFaceTracker_VERSION_REVISION 0)
+
+
+include_directories("/home/gh/CLionProjects/arctern1.0/src/Engin/src/hisi")
+
+#-------------------- add source and link libraries --------------------
+file(GLOB LOCAL_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/hisi_object_tracker/*.cpp)
+
+list(APPEND ALGSOURCES ${LOCAL_SOURCES})
+set(ALGSOURCES ${ALGSOURCES} PARENT_SCOPE)
+add_definitions( -fPIC -Wno-sign-compare )
+add_definitions(-DHIMIX_CHECK_NNIE_INIT)
+
+
+
+file(GLOB EXAMPLE_SOURCES
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../Example/Algorithms/${PROJECT_NAME}/*.cpp)
+
+if (LOCALBUILD)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/../../../cmake/localbuild.cmake)
+    include(cmake/specificlocalbuild.cmake)
+endif ()
+
+
+
+message("${LOCAL_SOURCES}")
+add_library(${PROJECT_NAME} STATIC ${LOCAL_SOURCES} ${LOCALBUILD_SOURCES})
+#add_executable(${PROJECT_NAME}_UnitTest ${TEST_SOURCES})
+add_executable(${PROJECT_NAME}_Example ${EXAMPLE_SOURCES})
+#add_executable(${PROJECT_NAME}_UnitTest_D ${TEST_SOURCES})
+#add_executable(${PROJECT_NAME}_Example_D ${EXAMPLE_SOURCES})
+
+target_link_libraries(${PROJECT_NAME}
+        ${TARGET_STATIC_NAME}          ${OPENCV_LIBS}
+        ${LOCAL_COMPUTE_LIBS}        ${LOCAL_EXTRA_DEPLOY_TARGET_LIBRARY})
+#target_link_libraries(${PROJECT_NAME}_UnitTest
+#        ${PROJECT_NAME}        ${OPENCV_LIBS}
+#        ${EXTRA_DEPLOY_TARGET_LIBRARY}   gtest        yaml-cpp)
+target_link_libraries(${PROJECT_NAME}_Example
+        ${PROJECT_NAME}        ${OPENCV_LIBS}
+        ${EXTRA_DEPLOY_TARGET_LIBRARY})
+#target_link_libraries(${PROJECT_NAME}_UnitTest_D
+#        ${TARGET_NAME}        ${OPENCV_LIBS}
+#        ${EXTRA_DEPLOY_TARGET_LIBRARY}      gtest     yaml-cpp)
+#target_link_libraries(${PROJECT_NAME}_Example_D
+#        ${TARGET_NAME}        ${OPENCV_LIBS}
+#        ${EXTRA_DEPLOY_TARGET_LIBRARY})
+#
+##-------------------- add source and link libraries --------------------
+#INSTALL(TARGETS ${PROJECT_NAME}_UnitTest_D
+#        ${PROJECT_NAME}_Example_D
+#        RUNTIME DESTINATION bin/Algorithms/${PROJECT_NAME}
+#        LIBRARY DESTINATION lib
+#        )
+#INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Docs/ DESTINATION docs PATTERN *.md)
+#INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Docs/ DESTINATION docs PATTERN *.txt)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.h DESTINATION include)

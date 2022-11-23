@@ -1,0 +1,23 @@
+#ERROR:未识别的文件格式.thread
+
+#编译线程文件
+THREAD:=$(wildcard *.thread)
+THR_BIN:=$(patsubst %.thread, %, $(THREAD))
+OUTA:=MAINA
+$(OUTA):$(THR_BIN)
+%:%.thread
+	gcc $^ -o $@ -pthread
+
+#编译.c文件
+SRCS:=$(wildcard *.c)
+BIN:=$(patsubst %.c, %, $(SRCS))
+OUT:=MAIN
+$(OUT):$(BIN)
+%:%.c
+	gcc $^ -o $@
+
+#伪目标
+.PHONY: clean rebuild $(OUT) $(OUTA)
+clean:
+	rm -f $(BIN) $(THR_BIN)
+rebuld: clean $(OUT) $(OUTA)

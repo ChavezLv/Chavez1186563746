@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmemoryDB.a CMakeFiles/memoryDB.dir/block_set.cpp.o CMakeFiles/memoryDB.dir/memoryDB.cpp.o CMakeFiles/memoryDB.dir/memoryDBimpl.cpp.o
+/usr/bin/ranlib libmemoryDB.a

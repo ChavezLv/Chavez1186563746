@@ -1,0 +1,13 @@
+english_yuliao_dir  /home/ren/mydir/project_cpp_4.0/data/yuliao_en
+chinese_yuliao_dir /home/ren/mydir/project_cpp_4.0/data/yuliao_cn 
+english_stop_file  /home/ren/mydir/project_cpp_4.0/data/stopwords/stop_words_eng.txt
+chinese_stop_file /home/ren/mydir/project_cpp_4.0/data/stopwords/hit_stopwords.txt
+english_store_file  /home/ren/mydir/project_cpp_4.0/data/dat/dictional_en.dat
+chinese_store_file  /home/ren/mydir/project_cpp_4.0/data/dat/dictional_zh.dat
+english_index_file  /home/ren/mydir/project_cpp_4.0/data/index/en_index
+chinese_index_file  /home/ren/mydir/project_cpp_4.0/data/index/zh_index
+DICT_PATH  /home/ren/mydir/project_cpp_4.0/libs/dict/jieba.dict.utf8
+HMM_PATH  /home/ren/mydir/project_cpp_4.0/libs/dict/hmm_model.utf8
+USER_DICT_PATH  /home/ren/mydir/project_cpp_4.0/libs/dict/user.dict.utf8
+IDF_PATH  /home/ren/mydir/project_cpp_4.0/libs/dict/idf.utf8
+STOP_WORD_PATH  /home/ren/mydir/project_cpp_4.0/libs/dict/stop_words.utf8

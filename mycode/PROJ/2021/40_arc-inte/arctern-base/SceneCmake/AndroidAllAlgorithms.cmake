@@ -1,0 +1,10 @@
+
+add_definitions(-DTVM_ALLOWED)
+add_subdirectory(src/Algorithms/faceLivenessIr)
+add_subdirectory(src/Algorithms/faceDetectRTN)
+add_subdirectory(src/Algorithms/faceMask)
+add_subdirectory(src/Algorithms/faceQuality)
+add_subdirectory(src/Algorithms/faceImageColor)
+add_subdirectory(src/Algorithms/facialLandmark)
+add_subdirectory(src/Algorithms/faceNoiseMotionblur)
+add_subdirectory(src/Algorithms/faceGluon)

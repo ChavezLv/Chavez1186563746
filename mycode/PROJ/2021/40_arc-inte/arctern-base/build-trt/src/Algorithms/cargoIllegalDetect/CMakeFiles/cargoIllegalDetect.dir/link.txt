@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcargoIllegalDetect.a CMakeFiles/cargoIllegalDetect.dir/cargoIllegalDetect.cpp.o CMakeFiles/cargoIllegalDetect.dir/trt/TrtCargoIllegalDetectImpl.cpp.o
+/usr/bin/ranlib libcargoIllegalDetect.a

@@ -1,0 +1,203 @@
+#include <math.h>
+#include <iostream>
+#include <string>
+#include <memory>
+
+using std::cout;
+using std::endl;
+using std::string;
+using std::unique_ptr;
+
+//抽象类作为接口使用的例子
+//可以实现多态
+//
+//面向对象的设计原则：开闭原则
+//对扩展开放，对修改关闭
+class Figure
+{
+public:
+    virtual void display() = 0;
+    virtual double area() = 0;
+};
+
+class Rectangle
+: public Figure
+{
+public:
+    Rectangle(double length = 0, double width = 0)
+    : _length(length)
+    , _width(width)
+    {
+
+    }
+
+    void display() override
+    {
+        cout << "Rectangle";
+    }
+
+    double area() override
+    {
+        return _length * _width;
+    }
+private:
+    double _length;
+    double _width;
+};
+
+class Circle
+: public Figure
+{
+public:
+    Circle(double radius = 0)
+    : _radius(radius)
+    {
+
+    }
+
+    void display() override
+    {
+        cout << "Circle";
+    }
+
+    double area() override
+    {
+        return 3.14 * _radius *_radius;;
+    }
+private:
+    double _radius;
+};
+
+class Triangle
+: public Figure
+{
+public:
+    Triangle(double a = 0, double b = 0, double c = 0)
+    : _a(a)
+    , _b(b)
+    , _c(c)
+    {
+
+    }
+
+    void display() override
+    {
+        cout << "Triangle";
+    }
+
+    double area() override
+    {
+        double tmp = (_a + _b + _c)/2;
+
+        return sqrt(tmp * (tmp - _a) * (tmp - _b) * (tmp - _c));
+    }
+private:
+    double _a;
+    double _b;
+    double _c;
+};
+
+void func(Figure *pfig)
+{
+    pfig->display();
+    cout << "的面积 : " << pfig->area() << endl;
+}
+
+//简单工厂(静态)
+//1、违背了单一职责原则
+//2、违背了开放闭合原则
+class Factory
+{
+public:
+    static Figure *create(const string &name)
+    {
+        if(name == "rectangle")
+        {
+            //数据参数都是通过配置文件读取出来的 txt  xml
+            return new Rectangle(10, 20);
+
+        }
+        else if(name == "circle")
+        {
+            //数据参数都是通过配置文件读取出来的 txt  xml
+            return new Circle(10);
+
+        }
+        else if(name == "triangle")
+        {
+            //数据参数都是通过配置文件读取出来的 txt  xml
+            return new Triangle(3, 4, 5);
+
+        }
+#if 0
+        else if()
+        {
+
+        }
+        else if()
+        {
+
+        }
+#endif
+        else
+        {
+            return nullptr;
+        }
+
+    }
+#if 0
+    static Figure *createReactangle()
+    {
+        //数据参数都是通过配置文件读取出来的 txt  xml
+        return new Rectangle(10, 20);
+    }
+    
+    static Figure *createCircle()
+    {
+        //数据参数都是通过配置文件读取出来的 txt  xml
+        return new Circle(10);
+    }
+    
+    static Figure *createTriangle()
+    {
+        //数据参数都是通过配置文件读取出来的 txt  xml
+        return new Triangle(3, 4, 5);
+    }
+#endif
+    
+};
+#if 0
+Figure *createReactangle()
+{
+    //数据参数都是通过配置文件读取出来的 txt  xml
+    return new Rectangle(10, 20);
+}
+
+Figure *createCircle()
+{
+    //数据参数都是通过配置文件读取出来的 txt  xml
+    return new Circle(10);
+}
+
+Figure *createTriangle()
+{
+    //数据参数都是通过配置文件读取出来的 txt  xml
+    return new Triangle(3, 4, 5);
+}
+
+#endif
+int main(int argc, char **argv)
+{
+    /* Rectangle rectangle(10, 20); */
+    /* Circle circle(10); */
+    /* Triangle triangle(3, 4, 5); */
+    unique_ptr<Figure> rec(Factory::create("rectangle"));
+    unique_ptr<Figure> cir(Factory::create("circle"));
+    unique_ptr<Figure> tri(Factory::create("triangle"));
+
+    func(rec.get());
+    func(cir.get());
+    func(tri.get());
+    return 0;
+}
+

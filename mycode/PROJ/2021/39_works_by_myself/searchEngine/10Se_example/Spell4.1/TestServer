@@ -1,0 +1,61 @@
+#include "TcpServer.h"
+#include"TcpConnection.h"
+#include "ThreadPool.hpp"
+#include <iostream>
+using namespace wd;
+using namespace::std;
+
+ThreadPool pool(4,10);
+class MyTask{
+public:
+    MyTask(const string&msg,const TcpConnectionPtr&conn)
+    :_msg(msg)
+    ,_conn(conn)
+    {
+
+    }
+    void process(){
+        //encode
+        //compute
+        //decode
+        _conn->sendInloop(_msg);
+    }
+private:
+    string _msg;
+    TcpConnectionPtr _conn;
+};
+
+void Connection(const TcpConnectionPtr&tcp1){
+    cout<<tcp1->toString()<<"has connect!"<<endl;
+    tcp1->send("wecome to server!");
+}
+void Message(const TcpConnectionPtr& tcp1){
+    string msg=tcp1->receive();
+    cout<<"recv from client "<<msg<<endl;
+    /* tcp1->send(msg); */
+    //业务逻辑的处理要交给线程池处理
+    
+    MyTask task(msg,tcp1);
+    pool.addTask(bind(&MyTask::process,&task)); 
+}
+void Close(const TcpConnectionPtr&tcp1){
+    cout<<tcp1->toString()<<"has closed!"<<endl;
+}
+
+
+void test0(){
+    TcpServer server("172.17.147.39",8888);
+    pool.start();
+
+    server.setNewConnectionCallBack(Connection);
+    server.setMessageCallBack(Message);
+    server.setCloseCallBack(Close);
+    
+    server.start();
+}
+int main()
+{
+    test0();
+    return 0;
+}
+

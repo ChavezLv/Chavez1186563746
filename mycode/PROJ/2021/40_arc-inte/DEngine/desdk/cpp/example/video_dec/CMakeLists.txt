@@ -1,0 +1,113 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(video_dec C CXX)
+
+add_definitions(-DPROJECT_SRC="${PROJECT_SOURCE_DIR}")
+set(CMAKE_BUILD_TYPE "Debug")
+# Utility functions && compilation options
+function(add_sys_libs _target)
+    target_link_libraries(${_target}  "-Wl,--start-group" "-Wl,--no-as-needed" ${Desdk_LIBS} "-Wl,--as-needed" "-Wl,--end-group")
+    
+    if(UNIX)
+		target_link_libraries(${_target} rt pthread dl)
+        #target_link_libraries(${_target} gomp rt pthread dl)
+    endif(UNIX)
+endfunction(add_sys_libs _target)
+
+if(MSVC)
+  add_definitions(-DWIN32_LEAN_AND_MEAN)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+  add_definitions(-D_SCL_SECURE_NO_WARNINGS)
+  add_definitions(-D_ENABLE_EXTENDED_ALIGNED_STORAGE)
+  add_definitions(-DHalide_SHARED)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /bigobj")
+  if(USE_MSVC_MT)
+    foreach(flag_var
+        CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
+        CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
+      if(${flag_var} MATCHES "/MD")
+        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
+      endif(${flag_var} MATCHES "/MD")
+    endforeach(flag_var)
+  endif()
+else(MSVC)
+  include(CheckCXXCompilerFlag)
+  check_cxx_compiler_flag("-std=c++11"    SUPPORT_CXX11)
+  if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+    add_compile_options(-O0 -Wall -fPIC -fvisibility=hidden -std=c++11)
+  else()
+    set(CMAKE_C_FLAGS "-O2 -Wall -fPIC -fvisibility=hidden ${CMAKE_C_FLAGS}")
+    set(CMAKE_CXX_FLAGS "-O2 -Wall -fPIC -fvisibility=hidden -std=c++11 ${CMAKE_CXX_FLAGS}")
+  endif ()
+  if (CMAKE_CXX_COMPILER_ID MATCHES "GNU" AND
+      CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 7.0)
+    set(CMAKE_CXX_FLAGS "-faligned-new ${CMAKE_CXX_FLAGS}")
+  endif()
+endif(MSVC)
+
+
+# cmake set info
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(Desdk_LIBS "")
+include_directories("${PROJECT_SOURCE_DIR}/../../include")
+include_directories("${PROJECT_SOURCE_DIR}/../../include/core")
+include_directories("${PROJECT_SOURCE_DIR}/../../include/node")
+
+set(TARGET_TYPE $ENV{TARGET_TYPE})
+set(TARGET_OS $ENV{TARGET_OS})
+set(TARGET_CPU $ENV{TARGET_CPU})
+set(TARGET_CH $ENV{TARGET_CH})
+
+message("TARGET_TYPE $ENV{TARGET_TYPE}")
+message("TARGET_CPU $ENV{TARGET_CPU}")
+if("${TARGET_CPU}" STREQUAL "dp1000")
+  add_definitions(-DUSE_DP1000_PLATFORM)
+  SET(CMAKE_SYSTEM_NAME Linux)
+  set(CROSS_PREFIX "csky-abiv2-linux-")
+endif()
+
+message("CROSS_PREFIX ${CROSS_PREFIX}")
+if(DEFINED CROSS_PREFIX)
+  set(CROSS_TOOLCHAIN_PREFIX ${CROSS_PREFIX})
+  set(CMAKE_CXX_COMPILER "${CROSS_TOOLCHAIN_PREFIX}g++")
+  set(CMAKE_C_COMPILER "${CROSS_TOOLCHAIN_PREFIX}gcc")
+  set(CMAKE_STRIP "${CROSS_TOOLCHAIN_PREFIX}strip")
+endif()
+
+if(TARGET_CH)
+set(PLAT ${TARGET_TYPE}_${TARGET_OS}-${TARGET_CPU}_${TARGET_CH})
+else()
+set(PLAT ${TARGET_TYPE}_${TARGET_OS}-${TARGET_CPU})
+endif()
+
+list(APPEND Desdk_LIBS ${PROJECT_SOURCE_DIR}/../../../platform/${PLAT}/lib/libdesdkmm.so)
+list(APPEND Desdk_LIBS ${PROJECT_SOURCE_DIR}/../../../platform/${PLAT}/lib/libdesdk.so)
+if ("${TARGET_TYPE}" STREQUAL "dev")
+list(APPEND Desdk_LIBS ${PROJECT_SOURCE_DIR}/../../../platform/${PLAT}/lib/libaie.so)
+endif()
+
+
+if(TARGET_CH)
+else()
+if ("${TARGET_TYPE}" STREQUAL "host")
+list(APPEND Desdk_LIBS ${PROJECT_SOURCE_DIR}/../../../platform/${PLAT}/lib/libusb.so)
+endif()
+endif()
+
+link_directories(${PROJECT_SOURCE_DIR}/../../../platform/${TARGET_TYPE}_${TARGET_OS}-${TARGET_CPU}/lib)
+if ("${TARGET_TYPE}" STREQUAL "host")
+link_directories(/usr/local/lib)
+endif()
+
+# source files
+if ("${TARGET_TYPE}" STREQUAL "host")
+file(GLOB APP_SRCS ${PROJECT_SOURCE_DIR}/host/src/video_dec.cc)
+add_executable(video_dec ${APP_SRCS})
+add_sys_libs(video_dec)
+INSTALL(TARGETS video_dec DESTINATION ${PROJECT_SOURCE_DIR}/host/bin)
+else()
+endif()

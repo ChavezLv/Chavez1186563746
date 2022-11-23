@@ -1,0 +1,13 @@
+CC:=g++
+SRCS:=$(wildcard *.cc)
+# SRCS2:=$(wildcard *.cpp)
+EXE:=$(patsubst %.cc,%,$(SRCS))
+# EXE:=$(patsubst %.cpp,%,$(SRCS2))
+CFLAGS:=-Wall -lpthread
+all:$(EXE)
+%:%.cc
+	$(CC) -o $@ $^ $(CFLAGS)
+.PHONY: clean rebuild
+clean:
+	$(RM) $(EXE)
+rebuild: all clean

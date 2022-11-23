@@ -1,0 +1,742 @@
+[
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/affine.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/affine.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/affine.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/crop.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/crop.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/crop.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/cvtColor.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/cvtColor.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/cvtColor.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/normalized.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/normalized.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/normalized.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/padding.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/padding.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/padding.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -c /workspace/arctern-base/src/ImgPreProcess/cuda/resize.cu -o CMakeFiles/ArcternCuda.dir/src/ImgPreProcess/cuda/resize.cu.o",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cuda/resize.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/ImgPreprocessorOnNppEx.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/ImgPreprocessorOnNppEx.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/ImgPreprocessorOnNppEx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/affine.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/affine.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/affine.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/buffers.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/buffers.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/buffers.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/crop.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/crop.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/crop.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/cvtColor.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/cvtColor.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/cvtColor.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/normalized.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/normalized.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/normalized.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/padding.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/padding.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/padding.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ImgPreprocessor.dir/src/ImgPreProcess/resize.cpp.o -c /workspace/arctern-base/src/ImgPreProcess/resize.cpp",
+  "file": "/workspace/arctern-base/src/ImgPreProcess/resize.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/YoloV3.cpp.o -c /workspace/arctern-base/src/Base/YoloV3.cpp",
+  "file": "/workspace/arctern-base/src/Base/YoloV3.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/YoloV4.cpp.o -c /workspace/arctern-base/src/Base/YoloV4.cpp",
+  "file": "/workspace/arctern-base/src/Base/YoloV4.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/arcternalgorithm.cpp.o -c /workspace/arctern-base/src/Base/arcternalgorithm.cpp",
+  "file": "/workspace/arctern-base/src/Base/arcternalgorithm.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/runparameter.cpp.o -c /workspace/arctern-base/src/Base/runparameter.cpp",
+  "file": "/workspace/arctern-base/src/Base/runparameter.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/yoloV5.cpp.o -c /workspace/arctern-base/src/Base/yoloV5.cpp",
+  "file": "/workspace/arctern-base/src/Base/yoloV5.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp.o -c /workspace/arctern-base/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp",
+  "file": "/workspace/arctern-base/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Processors/alignFace.cpp.o -c /workspace/arctern-base/src/Processors/alignFace.cpp",
+  "file": "/workspace/arctern-base/src/Processors/alignFace.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Processors/opencvPreprocessor.cpp.o -c /workspace/arctern-base/src/Processors/opencvPreprocessor.cpp",
+  "file": "/workspace/arctern-base/src/Processors/opencvPreprocessor.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/ReadWriteLock.cpp.o -c /workspace/arctern-base/src/common/ReadWriteLock.cpp",
+  "file": "/workspace/arctern-base/src/common/ReadWriteLock.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/Tensor5.cpp.o -c /workspace/arctern-base/src/common/Tensor5.cpp",
+  "file": "/workspace/arctern-base/src/common/Tensor5.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/ThreadSafeMap.cpp.o -c /workspace/arctern-base/src/common/ThreadSafeMap.cpp",
+  "file": "/workspace/arctern-base/src/common/ThreadSafeMap.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/aes_cryptor.cpp.o -c /workspace/arctern-base/src/common/aes_cryptor.cpp",
+  "file": "/workspace/arctern-base/src/common/aes_cryptor.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/algUtil.cpp.o -c /workspace/arctern-base/src/common/algUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/algUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/autoTime.cpp.o -c /workspace/arctern-base/src/common/autoTime.cpp",
+  "file": "/workspace/arctern-base/src/common/autoTime.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/common.cpp.o -c /workspace/arctern-base/src/common/common.cpp",
+  "file": "/workspace/arctern-base/src/common/common.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/detectUtil.cpp.o -c /workspace/arctern-base/src/common/detectUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/detectUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/encryx.cpp.o -c /workspace/arctern-base/src/common/encryx.cpp",
+  "file": "/workspace/arctern-base/src/common/encryx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/featureUtil.cpp.o -c /workspace/arctern-base/src/common/featureUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/featureUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/imageConvert.cpp.o -c /workspace/arctern-base/src/common/imageConvert.cpp",
+  "file": "/workspace/arctern-base/src/common/imageConvert.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/licenseverify.cpp.o -c /workspace/arctern-base/src/common/licenseverify.cpp",
+  "file": "/workspace/arctern-base/src/common/licenseverify.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/log/logger.cc.o -c /workspace/arctern-base/src/log/logger.cc",
+  "file": "/workspace/arctern-base/src/log/logger.cc"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Processors/NppPreprocessorEx.cpp.o -c /workspace/arctern-base/src/Processors/NppPreprocessorEx.cpp",
+  "file": "/workspace/arctern-base/src/Processors/NppPreprocessorEx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/trt/ArcternAlgorithmEx.cpp.o -c /workspace/arctern-base/src/Base/trt/ArcternAlgorithmEx.cpp",
+  "file": "/workspace/arctern-base/src/Base/trt/ArcternAlgorithmEx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Base/trt/TrtYoloV3.cpp.o -c /workspace/arctern-base/src/Base/trt/TrtYoloV3.cpp",
+  "file": "/workspace/arctern-base/src/Base/trt/TrtYoloV3.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/common/trt/TrtAlgorithmUtil.cpp.o -c /workspace/arctern-base/src/common/trt/TrtAlgorithmUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/trt/TrtAlgorithmUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/memoryDB/block_set.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/memoryDB/memoryDB.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/memoryDB/memoryDBimpl.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/licenseLandmark/licenseLandmark.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -Darctern_base_EXPORTS -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -fPIC -std=gnu++14 -o CMakeFiles/arctern-base.dir/src/Algorithms/TrtInterfaceCommonOperation.cpp.o -c /workspace/arctern-base/src/Algorithms/TrtInterfaceCommonOperation.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/TrtInterfaceCommonOperation.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/YoloV3.cpp.o -c /workspace/arctern-base/src/Base/YoloV3.cpp",
+  "file": "/workspace/arctern-base/src/Base/YoloV3.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/YoloV4.cpp.o -c /workspace/arctern-base/src/Base/YoloV4.cpp",
+  "file": "/workspace/arctern-base/src/Base/YoloV4.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/arcternalgorithm.cpp.o -c /workspace/arctern-base/src/Base/arcternalgorithm.cpp",
+  "file": "/workspace/arctern-base/src/Base/arcternalgorithm.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/runparameter.cpp.o -c /workspace/arctern-base/src/Base/runparameter.cpp",
+  "file": "/workspace/arctern-base/src/Base/runparameter.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/yoloV5.cpp.o -c /workspace/arctern-base/src/Base/yoloV5.cpp",
+  "file": "/workspace/arctern-base/src/Base/yoloV5.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp.o -c /workspace/arctern-base/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp",
+  "file": "/workspace/arctern-base/src/Processors/ImageFormatConverters/CpuAnyWhereFormatConverter.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Processors/alignFace.cpp.o -c /workspace/arctern-base/src/Processors/alignFace.cpp",
+  "file": "/workspace/arctern-base/src/Processors/alignFace.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Processors/opencvPreprocessor.cpp.o -c /workspace/arctern-base/src/Processors/opencvPreprocessor.cpp",
+  "file": "/workspace/arctern-base/src/Processors/opencvPreprocessor.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/ReadWriteLock.cpp.o -c /workspace/arctern-base/src/common/ReadWriteLock.cpp",
+  "file": "/workspace/arctern-base/src/common/ReadWriteLock.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/Tensor5.cpp.o -c /workspace/arctern-base/src/common/Tensor5.cpp",
+  "file": "/workspace/arctern-base/src/common/Tensor5.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/ThreadSafeMap.cpp.o -c /workspace/arctern-base/src/common/ThreadSafeMap.cpp",
+  "file": "/workspace/arctern-base/src/common/ThreadSafeMap.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/aes_cryptor.cpp.o -c /workspace/arctern-base/src/common/aes_cryptor.cpp",
+  "file": "/workspace/arctern-base/src/common/aes_cryptor.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/algUtil.cpp.o -c /workspace/arctern-base/src/common/algUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/algUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/autoTime.cpp.o -c /workspace/arctern-base/src/common/autoTime.cpp",
+  "file": "/workspace/arctern-base/src/common/autoTime.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/common.cpp.o -c /workspace/arctern-base/src/common/common.cpp",
+  "file": "/workspace/arctern-base/src/common/common.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/detectUtil.cpp.o -c /workspace/arctern-base/src/common/detectUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/detectUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/encryx.cpp.o -c /workspace/arctern-base/src/common/encryx.cpp",
+  "file": "/workspace/arctern-base/src/common/encryx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/featureUtil.cpp.o -c /workspace/arctern-base/src/common/featureUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/featureUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/imageConvert.cpp.o -c /workspace/arctern-base/src/common/imageConvert.cpp",
+  "file": "/workspace/arctern-base/src/common/imageConvert.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/licenseverify.cpp.o -c /workspace/arctern-base/src/common/licenseverify.cpp",
+  "file": "/workspace/arctern-base/src/common/licenseverify.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/log/logger.cc.o -c /workspace/arctern-base/src/log/logger.cc",
+  "file": "/workspace/arctern-base/src/log/logger.cc"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Processors/NppPreprocessorEx.cpp.o -c /workspace/arctern-base/src/Processors/NppPreprocessorEx.cpp",
+  "file": "/workspace/arctern-base/src/Processors/NppPreprocessorEx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/trt/ArcternAlgorithmEx.cpp.o -c /workspace/arctern-base/src/Base/trt/ArcternAlgorithmEx.cpp",
+  "file": "/workspace/arctern-base/src/Base/trt/ArcternAlgorithmEx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Base/trt/TrtYoloV3.cpp.o -c /workspace/arctern-base/src/Base/trt/TrtYoloV3.cpp",
+  "file": "/workspace/arctern-base/src/Base/trt/TrtYoloV3.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/common/trt/TrtAlgorithmUtil.cpp.o -c /workspace/arctern-base/src/common/trt/TrtAlgorithmUtil.cpp",
+  "file": "/workspace/arctern-base/src/common/trt/TrtAlgorithmUtil.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/memoryDB/block_set.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/memoryDB/memoryDB.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/memoryDB/memoryDBimpl.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/licenseLandmark/licenseLandmark.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/arctern-base_Static.dir/src/Algorithms/TrtInterfaceCommonOperation.cpp.o -c /workspace/arctern-base/src/Algorithms/TrtInterfaceCommonOperation.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/TrtInterfaceCommonOperation.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/enginBase.cpp.o -c /workspace/arctern-base/src/Engin/src/enginBase.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/enginBase.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/enginmanager.cpp.o -c /workspace/arctern-base/src/Engin/src/enginmanager.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/enginmanager.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/TRTModel.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/TRTModel.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/TRTModel.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/cnnModelTrtContext.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/cnnModelTrtContext.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/cnnModelTrtContext.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/cnnModelTrtEngine.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/cnnModelTrtEngine.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/cnnModelTrtEngine.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/convert/convert_trtModel.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/convert/convert_trtModel.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/convert/convert_trtModel.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/attributes.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/attributes.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/attributes.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/mxnetModelParser.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetModelParser.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetModelParser.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/mxnetOpImporters.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetOpImporters.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetOpImporters.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/mxnetParser.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetParser.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/mxnetParser.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/parser.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/parser.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/parser.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/parsers/shapedWeights.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/parsers/shapedWeights.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/parsers/shapedWeights.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/trtInfer.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/trtInfer.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/trtInfer.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/trtEngin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/trtEngin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/trtEngin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/trtEngineManager.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/trtEngineManager.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/trtEngineManager.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/inferPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/inferPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/inferPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/BilinearSampler/BilinearSamplerPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/BilinearSampler/BilinearSamplerPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/BilinearSampler/BilinearSamplerPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/Embedding/EmbeddingKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Embedding/EmbeddingKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Embedding/EmbeddingKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Embedding/EmbeddingPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/Embedding/EmbeddingPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Embedding/EmbeddingPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/GridGenerator/GridGeneratorPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/GridGenerator/GridGeneratorPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/GridGenerator/GridGeneratorPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/L2Normalization/L2NormalizationKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/L2Normalization/L2NormalizationKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/L2Normalization/L2NormalizationKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/L2Normalization/L2NormalizationPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/L2Normalization/L2NormalizationPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/L2Normalization/L2NormalizationPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/LastDimTopK/LastDimTopKKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/LastDimTopK/LastDimTopKKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/LastDimTopK/LastDimTopKKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/LastDimTopK/LastDimTopKPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/LastDimTopK/LastDimTopKPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/LastDimTopK/LastDimTopKPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/Pad/PadKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Pad/PadKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Pad/PadKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Pad/PadPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/Pad/PadPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Pad/PadPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/PReLU/PReLUKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/PReLU/PReLUKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/PReLU/PReLUKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/PReLU/PReLUPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/PReLU/PReLUPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/PReLU/PReLUPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/SpatialTransformer/SpatialTransformerPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/SpatialTransformer/SpatialTransformerPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/SpatialTransformer/SpatialTransformerPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/UpSampling/UpSamplingKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/UpSampling/UpSamplingKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/UpSampling/UpSamplingKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/UpSampling/UpSamplingPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/UpSampling/UpSamplingPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/UpSampling/UpSamplingPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/Equal/EqualKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Equal/EqualKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Equal/EqualKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Equal/EqualPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/Equal/EqualPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Equal/EqualPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/ModSaclar/ModSaclar.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/ModSaclar/ModSaclar.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/ModSaclar/ModSaclar.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/ModSaclar/ModSaclarKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/ModSaclar/ModSaclarKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/ModSaclar/ModSaclarKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/Repeat/RepeatKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Repeat/RepeatKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Repeat/RepeatKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Repeat/RepeatPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/Repeat/RepeatPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Repeat/RepeatPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   --default-stream per-thread -Xcompiler -fPIC -std=c++11 -O3 -DNDEBUG --generate-code=arch=compute_53,code=[compute_53,sm_53] -std=c++14 -x cu -dc /workspace/arctern-base/src/Engin/src/trt/core/plugin/Erf/ErfKernel.cu -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Erf/ErfKernel.cu.o",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Erf/ErfKernel.cu"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Engin",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/ENGIN.dir/src/trt/core/plugin/Erf/ErfPlugin.cpp.o -c /workspace/arctern-base/src/Engin/src/trt/core/plugin/Erf/ErfPlugin.cpp",
+  "file": "/workspace/arctern-base/src/Engin/src/trt/core/plugin/Erf/ErfPlugin.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/memoryDB",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG   -fvisibility=hidden -fPIC -std=gnu++14 -o CMakeFiles/memoryDB.dir/block_set.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/block_set.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/memoryDB",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG   -fvisibility=hidden -fPIC -std=gnu++14 -o CMakeFiles/memoryDB.dir/memoryDB.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDB.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/memoryDB",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG   -fvisibility=hidden -fPIC -std=gnu++14 -o CMakeFiles/memoryDB.dir/memoryDBimpl.cpp.o -c /workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/memoryDB/memoryDBimpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/memoryDB",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG   -fvisibility=hidden -fPIC -std=gnu++14 -o CMakeFiles/memoryDB_Example_D.dir/__/__/__/Example/Algorithms/memoryDB/main.cpp.o -c /workspace/arctern-base/Example/Algorithms/memoryDB/main.cpp",
+  "file": "/workspace/arctern-base/Example/Algorithms/memoryDB/main.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/memoryDB",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG   -fvisibility=hidden -fPIC -std=gnu++14 -o CMakeFiles/memoryDB_Example.dir/__/__/__/Example/Algorithms/memoryDB/main.cpp.o -c /workspace/arctern-base/Example/Algorithms/memoryDB/main.cpp",
+  "file": "/workspace/arctern-base/Example/Algorithms/memoryDB/main.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark.dir/licenseLandmark.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/licenseLandmark.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark.dir/trt/TrtLicenseLandMarkImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/licenseLandmark/trt/TrtLicenseLandMarkImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/licenseLandmark/groundtruth.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/groundtruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/groundtruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruth.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruthTest.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruthTest.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/licenseLandmark/trt/TrtGroundTruthTest.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/baseAlgrithm.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/baseAlgrithm.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/baseAlgrithm.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/baseGroundTruth.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/baseGroundTruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/baseGroundTruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/config.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/config.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/config.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/__/UnitTest/main.cpp.o -c /workspace/arctern-base/UnitTest/main.cpp",
+  "file": "/workspace/arctern-base/UnitTest/main.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/common/autoTime.cpp.o -c /workspace/arctern-base/src/common/autoTime.cpp",
+  "file": "/workspace/arctern-base/src/common/autoTime.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_UnitTest_D.dir/__/__/common/encryx.cpp.o -c /workspace/arctern-base/src/common/encryx.cpp",
+  "file": "/workspace/arctern-base/src/common/encryx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/licenseLandmark",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/licenseLandmark_Example_D.dir/__/__/__/Example/Algorithms/licenseLandmark/main.cpp.o -c /workspace/arctern-base/Example/Algorithms/licenseLandmark/main.cpp",
+  "file": "/workspace/arctern-base/Example/Algorithms/licenseLandmark/main.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect.dir/cargoIllegalDetect.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/cargoIllegalDetect.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect.dir/trt/TrtCargoIllegalDetectImpl.cpp.o -c /workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp",
+  "file": "/workspace/arctern-base/src/Algorithms/cargoIllegalDetect/trt/TrtCargoIllegalDetectImpl.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/cargoIllegalDetect/groundtruth.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/groundtruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/groundtruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruth.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruthTest.cpp.o -c /workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruthTest.cpp",
+  "file": "/workspace/arctern-base/UnitTest/Algorithms/cargoIllegalDetect/trt/TrtGroundTruthTest.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/baseAlgrithm.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/baseAlgrithm.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/baseAlgrithm.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/baseGroundTruth.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/baseGroundTruth.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/baseGroundTruth.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/UnitTestBase/config.cpp.o -c /workspace/arctern-base/UnitTest/UnitTestBase/config.cpp",
+  "file": "/workspace/arctern-base/UnitTest/UnitTestBase/config.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/__/UnitTest/main.cpp.o -c /workspace/arctern-base/UnitTest/main.cpp",
+  "file": "/workspace/arctern-base/UnitTest/main.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/common/autoTime.cpp.o -c /workspace/arctern-base/src/common/autoTime.cpp",
+  "file": "/workspace/arctern-base/src/common/autoTime.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_UnitTest_D.dir/__/__/common/encryx.cpp.o -c /workspace/arctern-base/src/common/encryx.cpp",
+  "file": "/workspace/arctern-base/src/common/encryx.cpp"
+},
+{
+  "directory": "/workspace/arctern-base/build-trt/src/Algorithms/cargoIllegalDetect",
+  "command": "/usr/bin/c++ -DDLL_EXPORT -DPLAIN_MODEL -DTRT_ALLOWED -I/usr/local/cuda/include -I/usr/local/TensorRT-7.2.1.6/include -I/usr/local/include/opencv -I/workspace/arctern-base/../arctern-libs/include -I/workspace/arctern-base -I/workspace/arctern-base/src   -fopenmp -fPIC -O3 -Wall  -msse4.1  -msse4.1 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/cargoIllegalDetect_Example_D.dir/__/__/__/Example/Algorithms/cargoIllegalDetect/main.cpp.o -c /workspace/arctern-base/Example/Algorithms/cargoIllegalDetect/main.cpp",
+  "file": "/workspace/arctern-base/Example/Algorithms/cargoIllegalDetect/main.cpp"
+}
+]

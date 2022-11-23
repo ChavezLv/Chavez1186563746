@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
+
+struct Record
+{
+    string _word;
+    int _frequency;
+};
+
+class Dictionary
+{
+public:
+    void read(const std::string &filename);
+    void store(const std::string &filename);
+private:
+    vector<Record> _dict;
+};
+
+int main(int argc, char **argv)
+{
+
+    return 0;
+}
+

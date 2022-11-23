@@ -1,0 +1,353 @@
+以下测试都是基于VS，X86环境(32bit)。。
+
+注意：虚基指针指向虚基类，虚函数指针指向虚表。。
+Linux与vs的唯一区别是，在Linux下虚函数指针与虚基指针合并了
+
+项目->(右键)属性->配置属性->C/C++->命令行
+/d1 reportSingleClassLayoutXXX 或者/d1 reportAllClassLayout
+
+
+测试一、虚继承与继承的区别
+//	１.　多了一个虚基指针
+//	２.　虚基类子对象位于派生类存储空间的最末尾(先存不变的后存共享的)
+
+1.1、单个继承，不带虚函数
+4/8
+1>class B	size(8):
+1>	+---
+1> 0	| +--- (base class A)
+1> 0	| | _ia
+1>	| +---
+1> 4	| _ib
+
+
+1.2、单个虚继承，不带虚函数
+4/12
+1>class B	size(12):
+1>	+---
+1> 0	| {vbptr}
+1> 4	| _ib
+1>	+---
+1>	+--- (virtual base A)
+1> 8	| _ia
+1>	+---
+1>B::$vbtable@:
+1> 0	| 0
+1> 1	| 8 (Bd(B+0)A)
+
+
+测试二：单个虚继承，带虚函数
+//   1.如果派生类没有自己新增的虚函数，此时派生类对象不会产生虚函数指针
+//   2.如果派生类拥有自己新增的虚函数，此时派生类对象就会产生自己本身的
+//    虚函数指针(指向新增的虚函数)，并且该虚函数指针位于派生类对象存储空间的开始位置
+2.1、单个继承，带虚函数
+8/12
+1>class B	size(12):
+1>	+---
+1> 0	| +--- (base class A)
+1> 0	| | {vfptr}
+1> 4	| | _ia
+1>	| +---
+1> 8	| _ib
+1>	+---
+1>B::$vftable@:
+1>	| &B_meta
+1>	|  0
+1> 0	| &B::f
+
+
+2.2、单个继承，带虚函数(自己新增虚函数)
+8/12
+>class B	size(12):
+1>	+---
+1> 0	| +--- (base class A)
+1> 0	| | {vfptr}
+1> 4	| | _ia
+1>	| +---
+1> 8	| _ib
+1>	+---
+1>B::$vftable@:
+1>	| &B_meta
+1>	|  0
+1> 0	| &B::f
+1> 1	| &B::fb2
+总结：针对2.1、2.2，普通继承，派生类新增虚函数直接放在基类虚表中；且基类布局在前面
+
+
+2.3、单个虚继承，带虚函数
+8/16
+1>class B	size(16):
+1>	+---
+1> 0	| {vbptr}    //有虚继承的时候就多一个虚基指针，虚基指针指向虚基表  
+1> 4	| _ib        //有虚函数的时候就产生一个虚函数指针，虚函数指针指向虚函数表
+1>	+--- 
+1>	+--- (virtual base A)
+1> 8	| {vfptr}
+1>12	| _ia
+1>	+---
+1>B::$vbtable@:
+1> 0	| 0
+1> 1	| 8 (Bd(B+0)A)
+1>B::$vftable@:
+1>	| -8
+1> 0	| &B::f
+
+
+2.4、单个虚继承，带虚函数(自己新增虚函数)
+8/20
+1>class B	size(20):
+1>	+---
+1> 0	| {vfptr}
+1> 4	| {vbptr}
+1> 8	| _ib
+1>	+---
+1>	+--- (virtual base A)
+1>12	| {vfptr}
+1>16	| _ia
+1>	+---
+1>B::$vftable@B@:
+1>	| &B_meta
+1>	|  0
+1> 0	| &B::fb2
+1>B::$vbtable@:
+1> 0	| -4
+1> 1	| 8 (Bd(B+4)A)
+1>B::$vftable@A@:
+1>	| -12
+1> 0	| &B::f
+总结：2.3、2.4、虚继承多一个虚基指针，如果派生类新增虚函数，则放在最前面；且基类布局放在最后面
+
+
+// 测试三：多重继承（带虚函数）
+// １、每个基类都有自己的虚函数表
+// ２、派生类如果有自己新增的虚函数，会被加入到第一个虚函数表之中
+// ３、内存布局中,其基类的布局按照基类被继承时的顺序进行排列
+// ４、派生类会覆盖基类的虚函数，只有第一个虚函数表中存放的是真实的被覆盖的虚函数的地址；
+//     其它的虚函数表中存放的并不是真实的对应的虚函数的地址，而只是一条跳转指令
+
+3.1、普通多重继承，带虚函数，自己有新增虚函数
+28
+1>class Derived	size(28):
+1>	+---
+1> 0	| +--- (base class Base1)
+1> 0	| | {vfptr}
+1> 4	| | _iBase1
+1>	| +---
+1> 8	| +--- (base class Base2)
+1> 8	| | {vfptr}
+1>12	| | _iBase2
+1>	| +---
+1>16	| +--- (base class Base3)
+1>16	| | {vfptr}
+1>20	| | _iBase3
+1>	| +---
+1>24	| _iDerived
+1>	+---
+1>Derived::$vftable@Base1@:
+1>	| &Derived_meta
+1>	|  0
+1> 0	| &Derived::f(虚函数的覆盖)
+1> 1	| &Base1::g
+1> 2	| &Base1::h
+1> 3	| &Derived::g1(新的虚函数，直接放在基类之后，加快查找速度)
+1>Derived::$vftable@Base2@:
+1>	| -8
+1> 0	| &thunk: this-=8; goto Derived::f   //虚函数表还可以存放跳转指令
+1> 1	| &Base2::g
+1> 2	| &Base2::h
+1>Derived::$vftable@Base3@:
+1>	| -16
+1> 0	| &thunk: this-=16; goto Derived::f
+1> 1	| &Base3::g
+1> 2	| &Base3::h
+
+
+3.2、虚拟多重继承，带虚函数，自己有新增虚函数(只有第一个是虚继承)
+32
+1>class Derived	size(32):
+1>	+---
+1> 0	| +--- (base class Base2)
+1> 0	| | {vfptr}
+1> 4	| | _iBase2
+1>	| +---
+1> 8	| +--- (base class Base3)
+1> 8	| | {vfptr}
+1>12	| | _iBase3
+1>	| +---
+1>16	| {vbptr}
+1>20	| _iDerived
+1>	+---
+1>	+--- (virtual base Base1)
+1>24	| {vfptr}
+1>28	| _iBase1
+1>	+---
+1>Derived::$vftable@Base2@:
+1>	| &Derived_meta
+1>	|  0
+1> 0	| &Derived::f
+1> 1	| &Base2::g
+1> 2	| &Base2::h
+1> 3	| &Derived::g1
+1>Derived::$vftable@Base3@:
+1>	| -8
+1> 0	| &thunk: this-=8; goto Derived::f
+1> 1	| &Base3::g
+1> 2	| &Base3::h
+1>Derived::$vbtable@:
+1> 0	| -16
+1> 1	| 8 (Derivedd(Derived+16)Base1)
+1>Derived::$vftable@Base1@:
+1>	| -24
+1> 0	| &thunk: this-=24; goto Derived::f
+1> 1	| &Base1::g
+1> 2	| &Base1::h
+
+
+3.3、虚拟多重继承，带虚函数，自己有新增虚函数(三个都是虚继承)
+36
+1>class Derived	size(36):
+1>	+---
+1> 0	| {vfptr}   //以空间换时间
+1> 4	| {vbptr}
+1> 8	| _iDerived
+1>	+---
+1>	+--- (virtual base Base1)
+1>12	| {vfptr}
+1>16	| _iBase1
+1>	+---
+1>	+--- (virtual base Base2)
+1>20	| {vfptr}
+1>24	| _iBase2
+1>	+---
+1>	+--- (virtual base Base3)
+1>28	| {vfptr}
+1>32	| _iBase3
+1>	+---
+1>Derived::$vftable@Derived@:
+1>	| &Derived_meta
+1>	|  0
+1> 0	| &Derived::g1
+1>Derived::$vbtable@:
+1> 0	| -4
+1> 1	| 8 (Derivedd(Derived+4)Base1)
+1> 2	| 16 (Derivedd(Derived+4)Base2)
+1> 3	| 24 (Derivedd(Derived+4)Base3)
+1>Derived::$vftable@Base1@:
+1>	| -12
+1> 0	| &Derived::f
+1> 1	| &Base1::g
+1> 2	| &Base1::h
+1>Derived::$vftable@Base2@:
+1>	| -20
+1> 0	| &thunk: this-=8; goto Derived::f
+1> 1	| &Base2::g
+1> 2	| &Base2::h
+1>Derived::$vftable@Base3@:
+1>	| -28
+1> 0	| &thunk: this-=16; goto Derived::f
+1> 1	| &Base3::g
+1> 2	| &Base3::h
+
+
+// 测试四：菱形虚继承
+
+//虚基指针所指向的虚基表的内容：
+//	1. 虚基指针的第一条内容表示的是该虚基指针距离所在的子对象的首地址的偏移
+//	2. 虚基指针的第二条内容表示的是该虚基指针距离虚基类子对象的首地址的偏移
+4.1、菱形普通继承(存储二义性)
+48
+class D	size(48):
+1>	+---
+1> 0	| +--- (base class B1)
+1> 0	| | +--- (base class B)
+1> 0	| | | {vfptr}
+1> 4	| | | _ib
+1> 8	| | | _cb  //1
+1>  	| | | <alignment member> (size=3) //内存对齐
+1>	| | +---
+1>12	| | _ib1
+1>16	| | _cb1
+1>  	| | <alignment member> (size=3)
+1>	| +---
+1>20	| +--- (base class B2)
+1>20	| | +--- (base class B)
+1>20	| | | {vfptr}
+1>24	| | | _ib
+1>28	| | | _cb
+1>  	| | | <alignment member> (size=3)
+1>	| | +---
+1>32	| | _ib2
+1>36	| | _cb2
+1>  	| | <alignment member> (size=3)
+1>	| +---
+1>40	| _id
+1>44	| _cd
+1>  	| <alignment member> (size=3)
+1>	+---
+1>D::$vftable@B1@:
+1>	| &D_meta
+1>	|  0
+1> 0	| &D::f
+1> 1	| &B::Bf
+1> 2	| &D::f1
+1> 3	| &B1::Bf1
+1> 4	| &D::Df
+1>D::$vftable@B2@:
+1>	| -20
+1> 0	| &thunk: this-=20; goto D::f
+1> 1	| &B::Bf
+1> 2	| &D::f2
+1> 3	| &B2::Bf2
+
+4.2、菱形虚拟继承
+52
+1>class D	size(52):
+1>	+---
+1> 0	| +--- (base class B1)
+1> 0	| | {vfptr}
+1> 4	| | {vbptr}
+1> 8	| | _ib1
+1>12	| | _cb1
+1>  	| | <alignment member> (size=3)
+1>	| +---
+1>16	| +--- (base class B2)
+1>16	| | {vfptr}
+1>20	| | {vbptr}
+1>24	| | _ib2
+1>28	| | _cb2
+1>  	| | <alignment member> (size=3)
+1>	| +---
+1>32	| _id
+1>36	| _cd
+1>  	| <alignment member> (size=3)
+1>	+---
+1>	+--- (virtual base B)
+1>40	| {vfptr}
+1>44	| _ib
+1>48	| _cb
+1>  	| <alignment member> (size=3)
+1>	+---
+1>D::$vftable@B1@:
+1>	| &D_meta
+1>	|  0
+1> 0	| &D::f1
+1> 1	| &B1::Bf1
+1> 2	| &D::Df
+1>D::$vftable@B2@:
+1>	| -16
+1> 0	| &D::f2
+1> 1	| &B2::Bf2
+1>D::$vbtable@B1@:
+1> 0	| -4
+1> 1	| 36 (Dd(B1+4)B)
+1>D::$vbtable@B2@:
+1> 0	| -4
+1> 1	| 20 (Dd(B2+4)B)
+1>D::$vftable@B@:
+1>	| -40
+1> 0	| &D::f
+1> 1	| &B::Bf
+
+
+
+

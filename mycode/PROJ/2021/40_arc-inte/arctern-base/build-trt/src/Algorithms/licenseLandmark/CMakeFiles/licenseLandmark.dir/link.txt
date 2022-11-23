@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblicenseLandmark.a CMakeFiles/licenseLandmark.dir/licenseLandmark.cpp.o CMakeFiles/licenseLandmark.dir/trt/TrtLicenseLandMarkImpl.cpp.o
+/usr/bin/ranlib liblicenseLandmark.a

@@ -1,0 +1,22 @@
+OBJS:=main.o
+CC:=gcc
+main:$(OBJS)
+	$(CC) -o $@ $^
+$(OBJS):main.c
+	$(CC) -o $@ -c $^
+.PHONY: clean rebuild
+clean:
+	$(RM) $(OBJS) main.exe
+rebuild:clean main 
+
+#out = hello//"=和:="的区别
+#rout = $(out)
+#out = world
+#$(rout):
+#	@echo $(rout)
+
+#out:=hello
+#rout:=$(out)
+#out:=world
+#$(rout):
+#	echo $(rout)

@@ -1,0 +1,12 @@
+ 2021-08-14 23:54:37,541 myCat [ERROR] src/test.cc/test/31/error 100 occured at 31 line! Signal 
+ 2021-08-14 23:54:37,541 myCat [INFO] src/test.cc/test/32/get info 10 at 32 line! Signal 
+ 2021-08-14 23:54:37,541 myCat [WARN] src/test.cc/test/33/warn Signal at line 33! 
+ 2021-08-16 22:38:01,952 myCat [ERROR] src/test.cc/test/31/error 100 occured at 31 line! Signal 
+ 2021-08-16 22:38:01,961 myCat [INFO] src/test.cc/test/32/get info 10 at 32 line! Signal 
+ 2021-08-16 22:38:01,961 myCat [WARN] src/test.cc/test/33/warn Signal at line 33! 
+ 2021-08-16 22:38:03,773 myCat [ERROR] src/test.cc/test/31/error 100 occured at 31 line! Signal 
+ 2021-08-16 22:38:03,773 myCat [INFO] src/test.cc/test/32/get info 10 at 32 line! Signal 
+ 2021-08-16 22:38:03,773 myCat [WARN] src/test.cc/test/33/warn Signal at line 33! 
+ 2021-08-16 22:38:04,931 myCat [ERROR] src/test.cc/test/31/error 100 occured at 31 line! Signal 
+ 2021-08-16 22:38:04,932 myCat [INFO] src/test.cc/test/32/get info 10 at 32 line! Signal 
+ 2021-08-16 22:38:04,932 myCat [WARN] src/test.cc/test/33/warn Signal at line 33! 

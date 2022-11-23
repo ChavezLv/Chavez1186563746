@@ -1,0 +1,31 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LicenseLandmark
+[ RUN      ] LicenseLandmark.TRT100
+__func__ addGroundTruth: 18: /workspace/arctern-base/../arctern-metadata/ModelsVerifyData/results_arcterncpp/LINUX_MXNET_CPU/license-landmark-f32-d-1.0.0-rc.json
+__func__ addGroundTruth: 34: "V3_test/1_hyx/000.jpg"
+
+
+=========================Single Test==========================
+
+
+Tesla T4
+LocalPostProcess: 52: 211, and input_w_ = 256
+LocalPostProcess: 53: 67, and input_w_ = 128
+LocalPostProcess: 61: landmark: 51.8113, 40.3519, (43, 21).
+LocalPostProcess: 61: landmark: 204.766, 28.1836, (169, 15).
+LocalPostProcess: 61: landmark: 206.586, 91.7176, (170, 48).
+LocalPostProcess: 61: landmark: 54.4248, 102.671, (45, 54).
+[2022-01-04 07:47:40.175] [info] CheckPictures, 76, cost time: 509.729 ms
+
+func:checkResult: 43 21 func:checkResult: 169 15 func:checkResult: 170 48 func:checkResult: 45 54 
+
+=========================Batch Test==========================
+
+
+[       OK ] LicenseLandmark.TRT100 (3888 ms)
+[----------] 1 test from LicenseLandmark (3888 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3888 ms total)
+[  PASSED  ] 1 test.

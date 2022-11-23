@@ -1,0 +1,49 @@
+2020-05-29 23:43:14,704: [INFO]  : MyLog create!
+2020-05-29 23:44:10,764: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:55862 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-29 23:44:53,600: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:55862 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-29 23:50:36,522: [INFO]  : MyLog create!
+2020-05-29 23:50:51,776: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-29 23:50:57,166: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:55902 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-29 23:51:21,400: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:55902 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-29 23:51:21,776: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-30 11:07:58,782: [INFO]  : MyLog create!
+2020-05-30 11:08:14,098: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-30 11:08:19,266: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:39222 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-30 11:08:44,097: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-30 11:08:46,873: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:39222 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-30 19:33:01,629: [INFO]  : MyLog create!
+2020-05-30 19:33:10,400: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:42150 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-05-30 19:33:16,916: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-30 19:33:46,916: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-05-30 19:34:06,334: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:42150 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:03:19,481: [INFO]  : MyLog create!
+2020-06-01 19:03:24,483: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38184 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:03:34,838: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-06-01 19:03:55,157: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38184 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:04:25,497: [INFO]  : MyLog create!
+2020-06-01 19:04:30,301: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38282 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:04:40,793: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-06-01 19:04:46,724: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38282 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:05:36,845: [INFO]  : MyLog create!
+2020-06-01 19:05:42,030: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38290 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:05:49,339: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38290 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:06:13,980: [INFO]  : MyLog create!
+2020-06-01 19:06:17,545: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38300 has connectd!
+ ##../include/MyLog.hpp:LogInfo:57##
+2020-06-01 19:06:29,278: [INFO]  : Cache has updated! ##CacheManger.cc:periodicUpdate:49##
+2020-06-01 19:06:56,077: [INFO]  : 192.168.204.128:8888 ----> 192.168.204.128:38300 has closed!
+ ##../include/MyLog.hpp:LogInfo:57##

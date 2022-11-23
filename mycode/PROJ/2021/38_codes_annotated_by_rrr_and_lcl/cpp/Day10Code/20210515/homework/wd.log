@@ -1,0 +1,14 @@
+2021-05-15 11:16:58,902 Mycat [ERROR] hshsh 
+2021-05-15 11:18:45,281 Mycat [ERROR] hahha 
+2021-05-15 11:24:06,464 Mycat [ERROR] testMyLogger.ccfunc12hahha 
+2021-05-15 11:25:04,781 Mycat [ERROR] testMyLogger.cc func 12 hahha 
+2021-05-15 11:28:17,564 Mycat [ERROR] testMyLogger.cc test 26 helloworld 
+2021-05-15 11:29:52,491 Mycat [ERROR] testMyLogger.cc test 26 helloworld 
+2021-05-15 11:29:52,491 Mycat [WARN] testMyLogger.cc test 27 helloworld 
+2021-05-15 11:29:52,491 Mycat [INFO] testMyLogger.cc test 28 helloworld 
+2021-05-15 11:29:52,491 Mycat [DEBUG] testMyLogger.cc test 29 helloworld 
+2021-05-15 11:30:03,275 Mycat [ERROR] testMyLogger.cc test 26 helloworld 
+2021-05-15 11:30:03,275 Mycat [WARN] testMyLogger.cc test 27 helloworld 
+2021-05-15 11:30:03,275 Mycat [INFO] testMyLogger.cc test 28 helloworld 
+2021-05-15 11:30:03,275 Mycat [DEBUG] testMyLogger.cc test 29 helloworld 
+2021-05-15 11:32:08,127 Mycat [ERROR] testMyLogger.cc test 31 wuhan 
